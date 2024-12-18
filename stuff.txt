@@ -1,0 +1,5 @@
+SMARTCAR_CLIENT_ID=7493e8dc-8ec2-402f-b289-b7933b54eeee
+SMARTCAR_CLIENT_SECRET=73043cb9-9bd7-4f4b-a8ab-c1422eab00eb
+SMARTCAR_REDIRECT_URI=http://localhost:3000/callback
+PORT=3000
+MONGO_DB_URI=mongodb+srv://damian:Nana1523@reservations.hly8d.mongodb.net/?retryWrites=true&w=majority&appName=Reservations
