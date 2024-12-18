@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected Vehicles</title>
+</head>
+<body>
+    <h1>Connected Vehicles</h1>
+    <ul>
+        <% vehicles.forEach(vehicle => { %>
+            <li>
+                <strong>
+                    <%= vehicle.make %> <%= vehicle.model %> (<%= vehicle.year %>) - VIN: <%= vehicle.vin || 'N/A' %>
+                </strong>
+                <a href="/vehicles/<%= vehicle.vehicleId %>">View Details</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
