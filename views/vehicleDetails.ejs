@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Details</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 2rem;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .vehicle-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        /* Information Boxes */
+        .info-box {
+            background-color: #e9ecef;
+            padding: 1rem;
+            border-radius: 6px;
+            flex: 1 1 45%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Vehicle Details</div>
+    <div class="container">
+        <div class="vehicle-info">
+            <div class="info-box">
+                <strong>Make:</strong>
+                <p><%= vehicle.make || 'N/A' %></p>
+            </div>
+            <div class="info-box">
+                <strong>Model:</strong>
+                <p><%= vehicle.model || 'N/A' %></p>
+            </div>
+            <div class="info-box">
+                <strong>Year:</strong>
+                <p><%= vehicle.year || 'N/A' %></p>
+            </div>
+            <div class="info-box">
+                <strong>VIN:</strong>
+                <p><%= vehicle.vin || 'N/A' %></p>
+            </div>
+            <div class="info-box">
+                <strong>Mileage:</strong>
+                <p><%= vehicle.mileage !== null ? vehicle.mileage : 'N/A' %> miles</p>
+            </div>
+            <div class="info-box">
+                <strong>Last Updated:</strong>
+                <p><%= timeAgo %></p>
+            </div>
+        </div>
+        <a href="/vehicles" class="back-button">Back to Vehicles</a>
+    </div>
+</body>
+</html>
